@@ -1,3 +1,8 @@
+body::-webkit-scrollbar{    
+  display: none;
+}
+/* above code is for removing the scroll bar */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
