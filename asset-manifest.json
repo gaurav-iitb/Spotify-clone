@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/gaurav-iitb/Spotify-clone.git/static/css/main.c8366c51.css",
-    "main.js": "/gaurav-iitb/Spotify-clone.git/static/js/main.b8577a45.js",
-    "static/js/787.a142c313.chunk.js": "/gaurav-iitb/Spotify-clone.git/static/js/787.a142c313.chunk.js",
-    "index.html": "/gaurav-iitb/Spotify-clone.git/index.html",
-    "main.c8366c51.css.map": "/gaurav-iitb/Spotify-clone.git/static/css/main.c8366c51.css.map",
-    "main.b8577a45.js.map": "/gaurav-iitb/Spotify-clone.git/static/js/main.b8577a45.js.map",
-    "787.a142c313.chunk.js.map": "/gaurav-iitb/Spotify-clone.git/static/js/787.a142c313.chunk.js.map"
+    "main.css": "/Spotify-clone/static/css/main.c8366c51.css",
+    "main.js": "/Spotify-clone/static/js/main.811d4902.js",
+    "static/js/787.a142c313.chunk.js": "/Spotify-clone/static/js/787.a142c313.chunk.js",
+    "index.html": "/Spotify-clone/index.html",
+    "main.c8366c51.css.map": "/Spotify-clone/static/css/main.c8366c51.css.map",
+    "main.811d4902.js.map": "/Spotify-clone/static/js/main.811d4902.js.map",
+    "787.a142c313.chunk.js.map": "/Spotify-clone/static/js/787.a142c313.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c8366c51.css",
-    "static/js/main.b8577a45.js"
+    "static/js/main.811d4902.js"
   ]
 }
