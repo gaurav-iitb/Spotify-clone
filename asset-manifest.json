@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/gaurav-iitb/Spotify-clone.git/static/css/main.c8366c51.css",
+    "main.js": "/gaurav-iitb/Spotify-clone.git/static/js/main.b8577a45.js",
+    "static/js/787.a142c313.chunk.js": "/gaurav-iitb/Spotify-clone.git/static/js/787.a142c313.chunk.js",
+    "index.html": "/gaurav-iitb/Spotify-clone.git/index.html",
+    "main.c8366c51.css.map": "/gaurav-iitb/Spotify-clone.git/static/css/main.c8366c51.css.map",
+    "main.b8577a45.js.map": "/gaurav-iitb/Spotify-clone.git/static/js/main.b8577a45.js.map",
+    "787.a142c313.chunk.js.map": "/gaurav-iitb/Spotify-clone.git/static/js/787.a142c313.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c8366c51.css",
+    "static/js/main.b8577a45.js"
+  ]
+}
