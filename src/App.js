@@ -7,6 +7,7 @@ import SpotPlayer from "./maincontent/SpotPlayer";
 import { useStateContextvalue } from "./context/DataStore";
 const spotify = new SpotifyWebApi();
 
+
 function App() {
   // const [token,settoken]= useState(null);
   const [{ user, token }, dispatch] = useStateContextvalue();
@@ -29,10 +30,17 @@ function App() {
       });
       spotify.setAccessToken(_token);
       spotify.getMe().then((user) => {
+        console.log("user is", user)
         dispatch({
           type: "SET_USER",
           user: user,
         });
+      }, (error)=>{
+        console.log("error is", error)
+        if(error.status === 401){
+          localStorage.removeItem("tokenStored")
+          return;
+        }
       });
       spotify.getUserPlaylists().then((playlists) => {
         // console.log(playlists)
