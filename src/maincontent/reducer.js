@@ -1,3 +1,4 @@
+import { ConstructionOutlined } from "@mui/icons-material";
 import { useState } from "react";
 
 export const initialstate = {
@@ -6,12 +7,15 @@ export const initialstate = {
   playing: false,
   item: null,
   token: null,
+  discover_weekly: null,
+  current_playing: null,
+  volume: null
 };
 
 //here state is previous state which the reducer function gets automatically.
 function reducer(state, action) {
   // console.log(action);
-
+  console.log("action is", action)
   switch (action.type) {
     case "SET_USER":
       return {
@@ -32,6 +36,16 @@ function reducer(state, action) {
       return {
         ...state,
         discover_weekly: action.discover_weekly,
+      };
+    case "SET_CURRENT_PLAYING":
+      return {
+        ...state,
+        current_playing: action.current_playing,
+      };
+    case "SET_IS_PLAYING":
+      return {
+        ...state,
+        playing: action.playing,
       };
     default:
       return state;

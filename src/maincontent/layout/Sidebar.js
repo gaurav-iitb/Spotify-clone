@@ -6,9 +6,10 @@ import SearchIcon from "@mui/icons-material/Search";
 import LibraryMusicIcon from "@mui/icons-material/LibraryMusic";
 import { useStateContextvalue } from "../../context/DataStore";
 
-function Sidebar() {
+function Sidebar({spotify}) {
   const [{ playlists }, dispatch] = useStateContextvalue();
 
+  console.log("playlists are", playlists)
   return (
     <div className="sidebar">
       <img
@@ -17,13 +18,13 @@ function Sidebar() {
         alt="spotify-logo"
       />
       <SidebarOption Icon={HomeIcon} option="Home" />
-      <SidebarOption Icon={SearchIcon} option="Search" />
-      <SidebarOption Icon={LibraryMusicIcon} option="Your Library" />
+      {/* <SidebarOption Icon={SearchIcon} option="Search" />
+      <SidebarOption Icon={LibraryMusicIcon} option="Your Library" /> */}
       <br />
       <strong className="sidetitle">Playlist</strong>
       <hr />
       {playlists?.items?.map((playlist) => (
-        <SidebarOption option={playlist.name} />
+        <SidebarOption spotify={spotify} option={playlist.name} ID = {playlist.id} />
       ))}
     </div>
   );

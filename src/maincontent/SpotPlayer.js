@@ -8,10 +8,10 @@ function SpotPlayer({ spotify }) {
   return (
     <div className="player">
       <div className="player_body">
-        <Sidebar />
+        <Sidebar spotify={spotify} />
         <Body spotify={spotify} />
       </div>
-      <Footer />
+      <Footer spotify={spotify} />
     </div>
   );
 }

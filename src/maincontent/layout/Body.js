@@ -7,14 +7,15 @@ import SongsRow from "./SongsRow";
 
 function Body({ spotify }) {
   const [{ discover_weekly }, dispatch] = useStateContextvalue();
+  console.log("discovery is",discover_weekly)
   return (
     <div className="Body">
       <Header spotify={spotify} />
       <div className="body_info">
-        <img src={discover_weekly?.images[0].url} alt="" />
+        <img src={discover_weekly?.images?.length > 0 ? discover_weekly?.images[0].url : ""} alt="" />
         <div className="info_Text">
           <strong>PLAYLIST</strong>
-          <h2>Discover Weekly</h2>
+          <h2>{discover_weekly?.name}</h2>
           <p>{discover_weekly?.description}</p>
         </div>
       </div>
@@ -26,8 +27,8 @@ function Body({ spotify }) {
           <MoreHoriz />
         </div>
 
-        {discover_weekly?.tracks.items.map((item) => (
-          <SongsRow track={item.track} />
+        {discover_weekly?.tracks?.items?.map((item, id) => (
+          <SongsRow key={id} track={item.track} />
         ))}
       </div>
     </div>

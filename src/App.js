@@ -14,8 +14,14 @@ function App() {
   useEffect(() => {
     const hash = getTokenFromResponseUrl();
     window.location.hash = "";
-    const _token = hash.access_token;
-
+    let _token = hash.access_token;
+    if(_token){
+      localStorage.setItem("tokenStored", _token)
+    }
+    if(!_token && localStorage.getItem("tokenStored")){
+      console.log("token stored is", localStorage.getItem("tokenStored"))
+      _token = localStorage.getItem("tokenStored");
+    }
     if (_token) {
       dispatch({
         type: "SET_TOKEN",
@@ -29,13 +35,15 @@ function App() {
         });
       });
       spotify.getUserPlaylists().then((playlists) => {
+        // console.log(playlists)
         dispatch({
           type: "SET_PLAYLISTS",
           playlists: playlists,
         });
       });
 
-      spotify.getPlaylist("37i9dQZEVXcMRkhP70bW4g").then((response) => {
+      spotify.getPlaylist("3IyPfHjbfThDU8HuBbOC9j").then((response) => {
+        console.log("reponse is", response)
         dispatch({
           type: "SET_DISCOVER_WEEKLY",
           discover_weekly: response,
