@@ -1,6 +1,7 @@
 export const authentication = "https://accounts.spotify.com/authorize";
 
-const redirecthome = "http://localhost:3000/";
+// const redirecthome = "http://localhost:3000/";
+const redirecthome = "https://gaurav-iitb.github.io/Spotify-clone/";
 
 const spotclientid = "abdbdba2b178431386857fe6655c48d9";
 
