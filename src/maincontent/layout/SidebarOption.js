@@ -29,7 +29,7 @@ function SidebarOption({ option, Icon, ID, spotify }) {
       {Icon ? (
         <a
           style={{ textDecoration: "none", color: "white" }}
-          href="/"
+          onClick={()=>{window.location.reload();}}
           className="cont"
         >
           {option}
